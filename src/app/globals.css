@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 345 6% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 345 6% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 6% 14%;
+    --primary: 149 86% 64%;
+    --primary-foreground: 345 6% 14%;
+    --secondary: 213 96% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 345 6% 96%;
+    --muted-foreground: 345 6% 40%;
+    --accent: 149 86% 96%;
+    --accent-foreground: 345 6% 14%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 345 6% 90%;
+    --input: 345 6% 90%;
+    --ring: 149 86% 64%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 345 6% 14%;
+    --foreground: 0 0% 100%;
+    --card: 345 6% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 345 6% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 149 86% 64%;
+    --primary-foreground: 345 6% 14%;
+    --secondary: 213 96% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 345 6% 22%;
+    --muted-foreground: 0 0% 75%;
+    --accent: 345 6% 24%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 345 6% 26%;
+    --input: 345 6% 24%;
+    --ring: 149 86% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Retaining legacy classes for backwards compatibility during migration, 
+     but updated to use CSS variables where appropriate or keeping the structure */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-2 px-4 rounded-lg transition-colors duration-200 inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold py-2 px-4 rounded-lg transition-colors duration-200 inline-flex items-center justify-center;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground rounded-xl shadow-sm border p-6;
+  }
+
+  .input-field {
+    @apply flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent; 
+    /* This might look boring in grayscale, so overriding for a bit of flair if needed, 
+       but Linear is strict. Let's keep it simple or maybe make it dark. */
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism effects */
+  .glass {
+    @apply backdrop-blur-2xl bg-opacity-60 dark:bg-opacity-40;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-2xl bg-card/60 dark:bg-card/40 border border-white/20 dark:border-white/10 shadow-2xl;
+  }
+
+  .glass-sidebar {
+    @apply backdrop-blur-3xl bg-card/70 dark:bg-card/50 border-r border-white/20 dark:border-white/10 shadow-2xl;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .transition-smooth-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply hover:scale-[1.02] hover:shadow-2xl transition-smooth;
+  }
+
+  .hover-glow {
+    @apply hover:shadow-[0_0_30px_rgba(86,239,159,0.3)] transition-smooth;
+  }
+
+  /* Blob animations for organic movement */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Subtle animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
