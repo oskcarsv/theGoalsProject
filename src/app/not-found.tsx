@@ -53,19 +53,19 @@ export default function NotFound() {
           <p className="text-sm text-muted-foreground mb-4">Accesos rápidos:</p>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Link
-              href="/dashboard/goals"
+              href="/goals"
               className="text-primary hover:text-primary/80 font-medium transition-colors"
             >
               Mis Objetivos
             </Link>
             <Link
-              href="/dashboard/review"
+              href="/review"
               className="text-primary hover:text-primary/80 font-medium transition-colors"
             >
               Review Semanal
             </Link>
             <Link
-              href="/dashboard/ranking"
+              href="/ranking"
               className="text-primary hover:text-primary/80 font-medium transition-colors"
             >
               Ranking

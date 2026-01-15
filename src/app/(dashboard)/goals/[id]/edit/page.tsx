@@ -65,7 +65,7 @@ export default function EditGoalPage({ params }: PageProps) {
       .single();
 
     if (fetchError || !goal) {
-      router.push('/dashboard/goals');
+      router.push('/goals');
       return;
     }
 
@@ -104,7 +104,7 @@ export default function EditGoalPage({ params }: PageProps) {
       return;
     }
 
-    router.push(`/dashboard/goals/${id}`);
+    router.push(`/goals/${id}`);
     router.refresh();
   };
 
@@ -127,7 +127,7 @@ export default function EditGoalPage({ params }: PageProps) {
       return;
     }
 
-    router.push('/dashboard/goals');
+    router.push('/goals');
     router.refresh();
   };
 

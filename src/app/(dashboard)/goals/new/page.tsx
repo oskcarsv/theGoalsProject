@@ -68,14 +68,14 @@ export default function NewGoalPage() {
       return;
     }
 
-    router.push('/dashboard/goals');
+    router.push('/goals');
     router.refresh();
   };
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <Link
-        href="/dashboard/goals"
+        href="/goals"
         className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground text-sm"
       >
         <ArrowLeft className="h-4 w-4" />

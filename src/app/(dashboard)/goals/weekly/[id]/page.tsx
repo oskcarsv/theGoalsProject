@@ -221,7 +221,7 @@ export default async function WeeklyGoalPage({ params }: WeeklyGoalPageProps) {
       <div className="grid md:grid-cols-2 gap-4">
         {/* Edit Goal */}
         <Card className="group hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary">
-          <Link href={`/dashboard/goals/weekly/${id}/edit`}>
+          <Link href={`/goals/weekly/${id}/edit`}>
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">

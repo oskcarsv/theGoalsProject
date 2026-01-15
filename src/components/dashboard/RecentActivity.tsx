@@ -78,7 +78,7 @@ export function RecentActivity({ weeklyGoals, completedGoals, totalGoals }: Rece
               No hay metas activas esta semana.
             </p>
             <Button asChild variant="outline" size="sm" className="gap-2 border-border hover:border-primary/50">
-              <Link href="/dashboard/goals/weekly/new">
+              <Link href="/goals/weekly/new">
                 <Target className="h-4 w-4" />
                 Planificar semana
               </Link>
@@ -87,7 +87,7 @@ export function RecentActivity({ weeklyGoals, completedGoals, totalGoals }: Rece
         ) : (
           <div className="space-y-2">
             {weeklyGoals.slice(0, 5).map((goal) => (
-              <Link key={goal.id} href={`/dashboard/goals/weekly/${goal.id}`}>
+              <Link key={goal.id} href={`/goals/weekly/${goal.id}`}>
                 <div 
                   className="group flex items-center gap-3 p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all cursor-pointer"
                 >
@@ -116,7 +116,7 @@ export function RecentActivity({ weeklyGoals, completedGoals, totalGoals }: Rece
             
             {weeklyGoals.length > 5 && (
               <Button variant="ghost" className="w-full text-xs mt-3 text-muted-foreground hover:text-primary" asChild>
-                <Link href="/dashboard/goals">
+                <Link href="/goals">
                   <TrendingUp className="h-3 w-3 mr-1" />
                   Ver todas las {weeklyGoals.length} metas →
                 </Link>

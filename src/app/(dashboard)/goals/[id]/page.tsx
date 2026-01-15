@@ -58,7 +58,7 @@ export default async function GoalDetailPage({ params }: PageProps) {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <Link
-        href="/dashboard/goals"
+        href="/goals"
         className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
       >
         <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -127,7 +127,7 @@ export default async function GoalDetailPage({ params }: PageProps) {
         </CardHeader>
         <CardContent className="space-y-3">
           <Button variant="outline" className="w-full justify-start gap-3 h-14 border-2 hover:border-secondary hover:bg-secondary/5 transition-all group" asChild>
-            <Link href={`/dashboard/goals/${id}/edit`} className="block">
+            <Link href={`/goals/${id}/edit`} className="block">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/10 group-hover:bg-secondary/20 transition-colors">
                 <Edit className="h-5 w-5 text-secondary" />
               </div>
@@ -139,7 +139,7 @@ export default async function GoalDetailPage({ params }: PageProps) {
           </Button>
 
           <Button variant="outline" className="w-full justify-start gap-3 h-14 border-2 hover:border-primary hover:bg-primary/5 transition-all group" asChild>
-            <Link href="/dashboard/goals/weekly/new" className="block">
+            <Link href="/goals/weekly/new" className="block">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                 <Calendar className="h-5 w-5 text-primary" />
               </div>

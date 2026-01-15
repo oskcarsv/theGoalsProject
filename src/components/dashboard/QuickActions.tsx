@@ -14,21 +14,21 @@ export function QuickActions() {
       title: 'Nueva Meta Anual',
       description: 'Define un nuevo objetivo a largo plazo',
       icon: Plus,
-      href: '/dashboard/goals/new',
+      href: '/goals/new',
       color: 'from-primary/20 to-primary/5'
     },
     {
       title: 'Planificar Semana',
       description: 'Organiza tus micro-objetivos',
       icon: Calendar,
-      href: '/dashboard/goals/weekly/new',
+      href: '/goals/weekly/new',
       color: 'from-secondary/20 to-secondary/5'
     },
     {
       title: 'Revisión Semanal',
       description: 'Registra tu progreso y evidencia',
       icon: CheckCircle,
-      href: '/dashboard/review',
+      href: '/review',
       color: 'from-green-500/20 to-green-500/5'
     }
   ];

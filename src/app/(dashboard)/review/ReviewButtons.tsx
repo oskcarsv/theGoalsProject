@@ -11,7 +11,7 @@ export function EmptyGoalsButton() {
       size="sm"
       className="gap-2"
     >
-      <Link href="/dashboard/goals/weekly/new">
+      <Link href="/goals/weekly/new">
         <Target className="h-4 w-4" />
         Crear metas para esta semana
       </Link>
@@ -25,7 +25,7 @@ export function PlanNextWeekButton() {
       asChild
       className="w-full gap-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-lg"
     >
-      <Link href="/dashboard/goals/weekly/new">
+      <Link href="/goals/weekly/new">
         <Sparkles className="h-4 w-4" />
         Planificar metas para la siguiente semana
       </Link>
