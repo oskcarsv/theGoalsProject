@@ -109,7 +109,7 @@ export default function Sidebar({ profile }: SidebarProps) {
           <ThemeToggle />
         </div>
         <Link
-          href="/profile"
+          href="/settings"
           onClick={() => setMobileOpen(false)}
           className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg transition-all text-muted-foreground hover:bg-accent hover:text-accent-foreground"
         >
