@@ -37,7 +37,7 @@ export function MacroGoalsList({ macroGoals }: MacroGoalsListProps) {
         <p className="text-muted-foreground max-w-sm mt-2 mb-6">
           Define tus objetivos principales para este año y comienza a trabajar en ellos.
         </p>
-        <Link href="/dashboard/goals/new">
+        <Link href="/goals/new">
           <Button>Crear mi primera meta</Button>
         </Link>
       </div>
@@ -51,7 +51,7 @@ export function MacroGoalsList({ macroGoals }: MacroGoalsListProps) {
         const IconComponent = AREA_ICONS[goal.area] || Target;
         
         return (
-          <Link key={goal.id} href={`/dashboard/goals/${goal.id}`} className="block group">
+          <Link key={goal.id} href={`/goals/${goal.id}`} className="block group">
             <Card className="h-full transition-all duration-300 hover:shadow-xl hover:border-primary/50 hover:scale-[1.02] bg-card/50 backdrop-blur-sm">
               <CardHeader className="pb-3">
                 <div className="flex justify-between items-start mb-4">

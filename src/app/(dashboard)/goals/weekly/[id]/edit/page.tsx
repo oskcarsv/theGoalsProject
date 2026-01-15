@@ -80,7 +80,7 @@ export default function EditWeeklyGoalPage({ params }: EditWeeklyGoalPageProps) 
       return;
     }
 
-    router.push(`/dashboard/goals/weekly/${id}`);
+    router.push(`/goals/weekly/${id}`);
     router.refresh();
   };
 
@@ -120,7 +120,7 @@ export default function EditWeeklyGoalPage({ params }: EditWeeklyGoalPageProps) 
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
         <Button variant="ghost" size="sm" asChild className="mb-4">
-          <Link href={`/dashboard/goals/weekly/${id}`} className="gap-2">
+          <Link href={`/goals/weekly/${id}`} className="gap-2">
             <ArrowLeft className="h-4 w-4" />
             Volver
           </Link>

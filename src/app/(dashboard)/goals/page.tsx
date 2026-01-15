@@ -64,13 +64,13 @@ export default async function GoalsPage() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-            <Link href="/dashboard/goals/weekly/new">
+            <Link href="/goals/weekly/new">
                 <Button variant="outline" size="sm">
                     <Calendar className="mr-2 h-4 w-4" />
                     Meta Semanal
                 </Button>
             </Link>
-          <Link href="/dashboard/goals/new">
+          <Link href="/goals/new">
             <Button size="sm">
               <Plus className="mr-2 h-4 w-4" />
               Meta Anual

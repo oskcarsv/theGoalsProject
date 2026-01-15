@@ -99,7 +99,7 @@ export default function NewWeeklyGoalPage() {
       return;
     }
 
-    router.push('/dashboard/goals');
+    router.push('/goals');
     router.refresh();
   };
 

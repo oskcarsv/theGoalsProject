@@ -29,7 +29,7 @@ export function WeeklyGoalsList({ weeklyGoals }: WeeklyGoalsListProps) {
         <p className="text-muted-foreground max-w-sm mt-2 mb-6">
           Divide tus metas anuales en tareas más pequeñas y manejables para esta semana.
         </p>
-        <Link href="/dashboard/goals/weekly/new">
+        <Link href="/goals/weekly/new">
            <Button variant="outline">Planificar semana</Button>
         </Link>
       </div>
@@ -71,7 +71,7 @@ export function WeeklyGoalsList({ weeklyGoals }: WeeklyGoalsListProps) {
              </div>
           </CardContent>
            <CardFooter className="pt-0">
-             <Link href={`/dashboard/goals/weekly/${goal.id}`} className="w-full">
+             <Link href={`/goals/weekly/${goal.id}`} className="w-full">
                 <Button variant="ghost" size="sm" className="w-full justify-between hover:bg-transparent px-0 text-muted-foreground group-hover:text-primary">
                     <span className="text-xs">Ver detalles</span>
                     <ArrowRight className="h-4 w-4" />

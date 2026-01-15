@@ -30,7 +30,7 @@ interface SidebarProps {
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Mis Metas', href: '/goals', icon: Goal },
-  { name: 'Review Semanal', href: '/dashboard/review', icon: CalendarCheck },
+  { name: 'Review Semanal', href: '/review', icon: CalendarCheck },
   { name: 'Ranking', href: '/ranking', icon: Trophy },
   { name: 'Match', href: '/match', icon: Users },
 ];

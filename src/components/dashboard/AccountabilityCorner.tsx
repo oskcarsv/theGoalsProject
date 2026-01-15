@@ -108,7 +108,7 @@ export function AccountabilityCorner({
 
         {/* CTA Buttons */}
         <div className="space-y-2 pt-2">
-          <Link href="/dashboard/review" className="block">
+          <Link href="/review" className="block">
             <Button className="w-full gap-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-lg">
               <MessageSquare className="h-4 w-4" />
               Ver mi reporte
